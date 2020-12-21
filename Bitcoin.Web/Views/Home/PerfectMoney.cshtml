@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "PerfectMoney";
+}
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=iso-8859-1">
+    <title>My company Check Out</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+    <p align="center"><font color="#000000" size="6"><strong>My company Check Out</strong></font></p>
+
+    <p>&nbsp;</p>
+
+    <p>
+        <font color="#000000" size="4">
+            Select the Payment Method to
+            use for your purchase:
+        </font>
+    </p>
+    <form action="https://perfectmoney.is/api/step1.asp" method="POST">
+        <input type="hidden" name="PAYEE_ACCOUNT" value="U27255798">
+        <input type="hidden" name="PAYEE_NAME" value="Arman">
+        @*<h5>PaymentID</h5>
+            <input type="hidden" name="PAYMENT_ID" value="0942563"><BR>*@
+        <h5>Payment Amount</h5>
+        <input type="text" name="PAYMENT_AMOUNT" value=""><BR>
+        <input type="hidden" name="PAYMENT_UNITS" value="USD">
+        <input type="hidden" name="STATUS_URL"
+               value="http://bitpay.spad-host.ir/PaymentStatus">
+        <input type="hidden" name="PAYMENT_URL"
+               value="http://bitpay.spad-host.ir/PaymentCompleted">
+        <input type="hidden" name="NOPAYMENT_URL"
+               value="http://bitpay.spad-host.ir/PaymentFailed">
+        <input type="hidden" name="PAYMENT_URL_METHOD" value="LINK">
+        <input type="hidden" name="NOPAYMENT_URL_METHOD" value="LINK">
+        <input type="hidden" name="SUGGESTED_MEMO" value="">
+        <input type="hidden" name="BAGGAGE_FIELDS" value="">
+        <input type="submit" name="PAYMENT_METHOD" value="PerfectMoney account">
+    </form>
+
+    @*<form method="POST">
+        <p align="center">
+            <input type="submit" name="CANCEL" value="CANCEL">
+        </p>
+    </form>*@
+</body>
+</html>
